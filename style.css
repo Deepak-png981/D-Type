@@ -1,0 +1,193 @@
+:root {
+    --primary-color: #33C3F0;
+    /* --background-color: #1A1A1A; */
+    --background-color: black;
+    --text-color: #FFFFFF;
+    --subtle-text-color: #888888;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%;
+    /* Default font-size for document */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Fira Code', monospace;
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center-align horizontally */
+    justify-content: flex-start;
+    /* Start align vertically */
+    /* min-height: 100vh; */
+    font-size: 1rem;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 10px auto;
+    /* margin-top: 0; */
+    padding: 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#textInput {
+    width: 100%;
+    /* Adjusted to 100% of the parent container */
+    padding: 10px;
+    margin: 10px 0;
+    /* Ensure there is space above and below the input */
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--text-color);
+    font-size: 1rem;
+    box-sizing: border-box;
+    /* Include padding and border in the element's width */
+}
+
+
+#textToType,
+#timer,
+#results {
+    text-align: left;
+    margin: 5px 0;
+}
+
+#timer,
+#results {
+    font-size: 0.8rem;
+    color: var(--subtle-text-color);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    html {
+        font-size: 0.9rem;
+    }
+
+    .header h1 {
+        font-size: 2em;
+        /* Slightly reduce the size for medium devices */
+    }
+
+    .header p {
+        font-size: 1rem;
+        /* Adjust paragraph size for medium devices */
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 0.8rem;
+    }
+
+    .container {
+        width: 95%;
+        /* margin: 5px auto; */
+        /* Adjust margin for small devices */
+        padding: 15px;
+    }
+
+    #textInput {
+        font-size: 0.9rem;
+    }
+
+    .header h1 {
+        font-size: 1.5em;
+        /* Reduce the size for small devices */
+    }
+
+    .header p {
+        font-size: 0.9rem;
+        /* Adjust paragraph size for small devices */
+    }
+}
+
+/* Additional styles for focus and interaction */
+#textInput:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+/* Cursor Blink Animation */
+@keyframes blinkingCursor {
+
+    0%,
+    100% {
+        background-color: var(--primary-color);
+    }
+
+    50% {
+        background-color: transparent;
+    }
+}
+
+.cursor {
+    animation: blinkingCursor 1s steps(1) infinite;
+}
+
+#result-p-tag {
+    display: none;
+    /* Hide the result paragraph initially */
+}
+
+#resetButton {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+#resetButton:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+#resetButton:active {
+    background-color: darken(var(--primary-color), 20%);
+}
+
+.header {
+    text-align: center;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    width: 80%;
+    padding: 20px;
+    margin-bottom: 30px;
+    /* Ensure the header spans the full width */
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.header p {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}

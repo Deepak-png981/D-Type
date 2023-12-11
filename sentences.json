@@ -1,0 +1,12 @@
+[
+    "const sum = (a, b) => a + b;",
+    "let array = [1, 2, 3, 4].filter(num => num % 2 === 0);",
+    "document.getElementById('demo').innerHTML = 'Hello World!';",
+    "console.log('Hello, world!');",
+    "function factorial(n) { return n != 1 ? n * factorial(n - 1) : 1; }",
+    "let obj = { name: 'Deepak Joshi', age: 30, city: 'New Delhi' };",
+    "setTimeout(() => { console.log('This is a delayed message'); }, 3000);",
+    "let squaredNumbers = numbers.map(num => num * num);",
+    "if (navigator.geolocation) { navigator.geolocation.getCurrentPosition(showPosition); }",
+    "document.querySelector('.class').addEventListener('click', function(event) { event.preventDefault(); });"
+]
