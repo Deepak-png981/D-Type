@@ -20,7 +20,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
         calculateAccuracy();
         checkCompletion();
+        highlightText();
     });
+    function highlightText() {
+        const userInput = textInput.value;
+        let highlightedText = '';
+        for (let i = 0; i < textToType.textContent.length; i++) {
+            let originalChar = textToType.textContent[i];
+            let typedChar = userInput[i];
+            if (typedChar == null) {
+                highlightedText += originalChar;
+            } else if (typedChar === originalChar) {
+                highlightedText += `<span class="correct">${originalChar}</span>`;
+            } else {
+                highlightedText += `<span class="incorrect">${originalChar}</span>`;
+            }
+        }
+        textToType.innerHTML = highlightedText;
+    }
 
     function loadRandomSentence() {
         resultPTag.style.display = 'none';

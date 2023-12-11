@@ -191,3 +191,15 @@ body {
     font-size: 1.2em;
     margin-bottom: 0.5em;
 }
+
+.correct {
+    color: limegreen;
+    /* Color for correctly typed characters */
+}
+
+.incorrect {
+    color: red;
+    /* Color for incorrectly typed characters */
+    text-decoration: underline;
+    /* Optional: adds underline to incorrect characters */
+}
